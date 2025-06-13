@@ -43,22 +43,28 @@
       color: #666;
     }
 
-    .content-with-sides {
+.content-with-sides {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: flex-start; /* Align tops */
+  justify-content: space-between;
   gap: 20px;
   margin-top: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* prevent wrap */
+}
+
+.side-image {
+  flex: 0 0 220px; /* fixed width for side images */
 }
 
 .side-image img {
-  width: 220px;
+  width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
 .center-content {
-  max-width: 500px;
+  flex: 1;
+  min-width: 0;
 }
   </style>
 </head>
