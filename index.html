@@ -1,48 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Unveil JESUS Ministry | Presenting Every Soul Perfect in Christ</title>
-<meta name="description" content="Welcome to VictorJesus.org, a place to share biblical teachings, devotionals, and ministry outreach content.">
-<meta name="keywords" content="Bible, JESUS, Christian, Ministry, Devotionals, Faith, Worship">
-<meta name="author" content="Unveil Jesus Ministry">
-<meta property="og:title" content="Unveil Jesus | Faith-Based Ministry">
-<meta property="og:description" content="Discover biblical teachings and devotionals to grow your faith.">
-<meta property="og:url" content="https://victorjesus.org">
-<meta property="og:type" content="website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to VictorJesus.org, a place to share biblical teachings, devotionals, and ministry outreach content.">
+  <meta name="keywords" content="Bible, JESUS, Christian, Ministry, Devotionals, Faith, Worship">
+  <meta name="author" content="Unveil Jesus Ministry">
   <style>
     body {
       font-family: Georgia, serif;
       background-color: #f9f6f1;
       color: #333;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 20px;
+      animation: fadeInBody 1.5s ease-in;
     }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .logo {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .logo img {
       width: 120px;
       border-radius: 50%;
     }
-    .side-images {
+
+    .verse-animator {
+      font-size: 1.2em;
+      font-style: italic;
+      text-align: center;
+      margin: 30px 0;
+      color: #2a4d69;
+      animation: fadeVerse 20s infinite;
+    }
+
+    @keyframes fadeVerse {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      25% { opacity: 1; }
+      35% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .content-with-sides {
       display: flex;
       justify-content: space-between;
-      margin: 30px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
-    .side-images img {
-      width: 48%;
+
+    .side-image {
+      flex: 0 0 220px;
+    }
+
+    .side-image img {
+      width: 100%;
       border-radius: 10px;
     }
+
+    .center-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     a {
       color: #0066cc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       margin-top: 40px;
       text-align: center;
@@ -50,29 +92,34 @@
       color: #666;
     }
 
-.content-with-sides {
-  display: flex;
-  align-items: flex-start; /* Align tops */
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 40px;
-  flex-wrap: nowrap; /* prevent wrap */
-}
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-.side-image {
-  flex: 0 0 220px; /* fixed width for side images */
-}
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
 
-.side-image img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+    }
 
-.center-content {
-  flex: 1;
-  min-width: 0;
-}
+    .extra-verses {
+      background: #fff;
+      border-left: 4px solid #2a4d69;
+      padding: 10px 15px;
+      margin: 20px 0;
+      font-style: italic;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -81,27 +128,43 @@
     <img src="Victor_JESUS.jpg" alt="Victor Jesus Logo">
   </div>
 
-  <h1>Welcome to Unveil JESUS the Victor </h1>
-  <h3><em>"Your word is a lamp to my feet and a light to my path." — Psalm 119:105</em></h3>
+  <h1 style="text-align:center;">Welcome to Unveil JESUS the Victor</h1>
+  <div class="verse-animator" id="verseAnimator">“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105</div>
 
-  <p>
-    <strong><em>Let's grow in JESUS everyday till we attain His perfection so that we be found worthy to stand before Him when He comes - Luke 21:36; Colossians 1:28</em></strong><br><br> Trust in God's Plan<br>
-    "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end" — Jeremiah 29:11
-  </p>
+  <script>
+    const verses = [
+      "“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105",
+      "“Be still, and know that I am God.” — Psalm 46:10",
+      "“I can do all things through Christ who strengthens me.” — Philippians 4:13",
+      "“The Lord is my shepherd; I shall not want.” — Psalm 23:1",
+      "“For I know the plans I have for you...” — Jeremiah 29:11",
+      "“He who began a good work in you will carry it on to completion...” — Philippians 1:6"
+    ];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % verses.length;
+      document.getElementById('verseAnimator').textContent = verses[index];
+    }, 7000);
+  </script>
 
-<div class="content-with-sides">
-  <div class="side-image">
-    <img src="Psalms23-3.png" alt="Psalm 23:3">
-  </div>
-  <div class="center-content">
-  <p>
-    As technology advances and the world becomes more sophisticated, the truth remains unchanged:
-    knowing Jesus is the only way to salvation. The Unveiling Victor JESUS channel is dedicated
-    to helping people discover God, understand His divine plan for each of us, and embrace our
-    responsibilities as we the chosen ones preparing for the secret coming of our Lord JESUS Christ.
-  </p>
+  <p><strong><em>Let's grow in JESUS everyday till we attain His perfection so that we be found worthy to stand before Him when He comes - Luke 21:36; Colossians 1:28</em></strong></p>
 
-  <p>👇 <strong>Explore Bible Audio and other Playlists:</strong></p>
+  <div class="extra-verses">“Set your minds on things above, not on earthly things.” — Colossians 3:2</div>
+  <div class="extra-verses">“The name of the Lord is a strong tower; the righteous run into it and are safe.” — Proverbs 18:10</div>
+  <div class="extra-verses">“Delight yourself in the Lord, and he will give you the desires of your heart.” — Psalm 37:4</div>
+
+  <div class="content-with-sides">
+    <div class="side-image">
+      <img src="Psalms23-3.png" alt="Psalm 23:3">
+    </div>
+
+    <div class="center-content">
+      <p>As technology advances and the world becomes more sophisticated, the truth remains unchanged:
+        knowing Jesus is the only way to salvation. The Unveiling Victor JESUS channel is dedicated
+        to helping people discover God, understand His divine plan for each of us, and embrace our
+        responsibilities as we the chosen ones preparing for the secret coming of our Lord JESUS Christ.</p>
+
+      <p>👇 <strong>Explore Bible Audio and other Playlists:</strong></p>
 
 <ul>
   <li>👉 <a href="https://www.youtube.com/playlist?list=PLhXZJ4xH8KjNhcT1BqSceqtrhFlCYnPzD" target="_blank">📖 KJV_NKJV_NIV_Bible_Shorts</a></li>
@@ -127,10 +190,12 @@
   <li>👉 <a href="https://www.youtube.com/playlist?list=PLhXZJ4xH8KjPH_j1NY_5IHpt5VKBTP5tj" target="_blank">📖 HolyBible_KJV</a></li>
 </ul>
     </div>
-  <div class="side-image">
-    <img src="Psalms24-1.png" alt="Psalm 24:1">
+
+    <div class="side-image">
+      <img src="Psalms24-1.png" alt="Psalm 24:1">
+    </div>
   </div>
-   </div>
+
   <p>
     💖 Don’t forget to:<br>
     👍 Like | 🔁 Share | 💬 Comment | 🔔 Subscribe for more Bible-related and other useful videos<br><br>
@@ -148,11 +213,14 @@
     <a href="https://www.paypal.com/donate/?hosted_button_id=JVWS2DLBVSRRL" target="_blank">Donate here as you feel led</a><br>
     We are grateful for your help, but know that our calling to serve continues with or without it— God always provides!! Blessings to you! 🙏
   </p>
-<p>
-  <strong><em>JESUS is coming Soon for His Chosen Ones!!</em></strong>
-</p>
-  <hr>
-  <footer>© 2025 Unveil JESUS Ministry</footer>
 
+  <p><strong><em>JESUS is coming Soon for His Chosen Ones!!</em></strong></p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/unveiljesus" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" title="Follow us on Facebook"></a>
+    <a href="https://x.com/VictorJ27380796" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" title="Follow us on Twitter"></a>
+  </div>
+
+  <footer>© 2025 Unveil JESUS Ministry</footer>
 </body>
 </html>
