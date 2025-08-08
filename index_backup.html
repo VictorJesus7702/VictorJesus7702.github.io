@@ -158,12 +158,12 @@
 
 <script>
 const verses = [
-  "Which also said, Ye men of Galilee, why stand ye gazing up into heaven? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven. | Acts 1:11 (KJV)",
-  "Let your speech be alway with grace, seasoned with salt, that ye may know how ye ought to answer every man. | Colossians 4:6 (KJV)",
-  "For the eyes of the LORD run to and fro throughout the whole earth, to shew himself strong in the behalf of them whose heart is perfect toward him. Herein thou hast done foolishly: therefore from henceforth thou shalt have wars. | 2 Chronicles 16:9 (KJV)",
-  "Against thee, thee only, have I sinned, and done this evil in thy sight: that thou mightest be justified when thou speakest, and be clear when thou judgest. | Psalms 51:4 (KJV)",
-  "All my bones shall say, LORD, who is like unto thee, which deliverest the poor from him that is too strong for him, yea, the poor and the needy from him that spoileth him? | Psalms 35:10 (KJV)",
-  "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. | James 1:5 (KJV)"
+  "Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. | Psalms 23:5 (KJV)",
+  "Surely there is no enchantment against Jacob, neither is there any divination against Israel: according to this time it shall be said of Jacob and of Israel, What hath God wrought! | Numbers 23:23 (KJV)",
+  "Thou shalt not commit adultery. | Exodus 20:14 (KJV)",
+  "I have fought a good fight, I have finished my course, I have kept the faith: | 2 Timothy 4:7 (KJV)",
+  "And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man. | Genesis 2:23 (KJV)",
+  "I will declare the decree: the LORD hath said unto me, Thou art my Son; this day have I begotten thee. | Psalms 2:7 (KJV)"
 ];
 let index = 0;
 setInterval(() => {
@@ -173,8 +173,8 @@ setInterval(() => {
     index = (index + 1) % verses.length;
     verseElem.textContent = verses[index];
     verseElem.style.opacity = 1; // fade in
-  }, 500); // only half a second fade
-}, 12000); // keep each verse visible for ~12s total
+  }, 500); // half-second fade out before change
+}, 12500); // verse stays ~12s + 0.5s fade
 
 </script>
 
