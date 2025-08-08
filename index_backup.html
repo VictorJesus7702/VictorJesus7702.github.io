@@ -140,6 +140,11 @@
       from { transform: translateX(-20px); opacity: 0; }
       to { transform: translateX(0); opacity: 1; }
     }
+
+    #verseAnimator {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
   </style>
 </head>
 <body>
@@ -153,18 +158,24 @@
 
 <script>
 const verses = [
-  "Let my sentence come forth from thy presence; let thine eyes behold the things that are equal. | Psalms 17:2 (KJV)",
-  "And I will betroth thee unto me for ever; yea, I will betroth thee unto me in righteousness, and in judgment, and in lovingkindness, and in mercies. | Hosea 2:19 (KJV)",
-  "Render therefore to all their dues: tribute to whom tribute is due; custom to whom custom; fear to whom fear; honour to whom honour. | Romans 13:7 (KJV)",
-  "He is wise in heart, and mighty in strength: who hath hardened himself against him, and hath prospered? | Job 9:4 (KJV)",
-  "The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ: | 1 Peter 3:21 (KJV)",
-  "I have blotted out, as a thick cloud, thy transgressions, and, as a cloud, thy sins: return unto me; for I have redeemed thee. | Isaiah 44:22 (KJV)"
+  "Which also said, Ye men of Galilee, why stand ye gazing up into heaven? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven. | Acts 1:11 (KJV)",
+  "Let your speech be alway with grace, seasoned with salt, that ye may know how ye ought to answer every man. | Colossians 4:6 (KJV)",
+  "For the eyes of the LORD run to and fro throughout the whole earth, to shew himself strong in the behalf of them whose heart is perfect toward him. Herein thou hast done foolishly: therefore from henceforth thou shalt have wars. | 2 Chronicles 16:9 (KJV)",
+  "Against thee, thee only, have I sinned, and done this evil in thy sight: that thou mightest be justified when thou speakest, and be clear when thou judgest. | Psalms 51:4 (KJV)",
+  "All my bones shall say, LORD, who is like unto thee, which deliverest the poor from him that is too strong for him, yea, the poor and the needy from him that spoileth him? | Psalms 35:10 (KJV)",
+  "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. | James 1:5 (KJV)"
 ];
 let index = 0;
 setInterval(() => {
-  index = (index + 1) % verses.length;
-  document.getElementById('verseAnimator').textContent = verses[index];
-}, 7000);
+  const verseElem = document.getElementById('verseAnimator');
+  verseElem.style.opacity = 0; // fade out
+  setTimeout(() => {
+    index = (index + 1) % verses.length;
+    verseElem.textContent = verses[index];
+    verseElem.style.opacity = 1; // fade in
+  }, 500); // only half a second fade
+}, 12000); // keep each verse visible for ~12s total
+
 </script>
 
   <p><strong><em>Let's grow in JESUS everyday till we attain His perfection so that we be found worthy to stand before Him when He comes - Luke 21:36; Colossians 1:28</em></strong></p>
