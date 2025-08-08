@@ -7,7 +7,7 @@ import subprocess
 # CONFIG
 source_root = r'D:\YTC\YTC_Daily_Final\Shorts'
 media_dir = 'media'
-index_file = 'index1.html'
+index_file = 'index.html'
 backup_file = 'index_backup.html'
 
 # Ensure media directory exists
@@ -111,7 +111,7 @@ for file in os.listdir(media_dir):
         os.remove(full_path)
 
 # 8️⃣ Final commit & push
-subprocess.run(["git", "add", "index1.html", "media/"])
+subprocess.run(["git", "add", "index.html", "media/"])
 try:
     subprocess.run(["git", "commit", "-m", f"Auto-update video content for {today_str}"], check=True)
 except subprocess.CalledProcessError:
