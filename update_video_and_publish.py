@@ -111,7 +111,7 @@ for file in os.listdir(media_dir):
         os.remove(full_path)
 
 # 8️⃣ Final commit & push
-subprocess.run(["git", "add", "index.html", "media/"])
+subprocess.run(["git", "add", "index1.html", "media/"])
 try:
     subprocess.run(["git", "commit", "-m", f"Auto-update video content for {today_str}"], check=True)
 except subprocess.CalledProcessError:
