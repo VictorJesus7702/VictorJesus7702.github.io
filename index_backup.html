@@ -8,6 +8,26 @@
   <meta name="keywords" content="Bible, JESUS, Christian, Ministry, Devotionals, Faith, Worship">
   <meta name="author" content="Unveil Jesus Ministry">
   <style>
+    @media (max-width: 768px) {
+  .content-with-sides {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .side-image,
+  .center-content {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .side-image video {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
     body {
       font-family: Georgia, serif;
       background-color: #f9f6f1;
@@ -131,21 +151,21 @@
   <h1 style="text-align:center;">Welcome to Unveil JESUS the Victor</h1>
   <div class="verse-animator" id="verseAnimator">“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105</div>
 
-  <script>
-    const verses = [
-      "“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105",
-      "“Be still, and know that I am God.” — Psalm 46:10",
-      "“I can do all things through Christ who strengthens me.” — Philippians 4:13",
-      "“The Lord is my shepherd; I shall not want.” — Psalm 23:1",
-      "“For I know the plans I have for you...” — Jeremiah 29:11",
-      "“He who began a good work in you will carry it on to completion...” — Philippians 1:6"
-    ];
-    let index = 0;
-    setInterval(() => {
-      index = (index + 1) % verses.length;
-      document.getElementById('verseAnimator').textContent = verses[index];
-    }, 7000);
-  </script>
+<script>
+const verses = [
+  "For what glory is it, if, when ye be buffeted for your faults, ye shall take it patiently? but if, when ye do well, and suffer for it, ye take it patiently, this is acceptable with God. | 1 Peter 2:20 (KJV)"
+  "But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble. | Psalms 59:16 (KJV)"
+  "Depart from me, all ye workers of iniquity; for the LORD hath heard the voice of my weeping. | Psalms 6:8 (KJV)"
+  "Who gave himself for us, that he might redeem us from all iniquity, and purify unto himself a peculiar people, zealous of good works. | Titus 2:14 (KJV)"
+  "Thou shalt not bear false witness against thy neighbour. | Exodus 20:16 (KJV)"
+  "For the righteous LORD loveth righteousness; his countenance doth behold the upright. | Psalms 11:7 (KJV)"
+];
+let index = 0;
+setInterval(() => {
+  index = (index + 1) % verses.length;
+  document.getElementById('verseAnimator').textContent = verses[index];
+}, 7000);
+</script>
 
   <p><strong><em>Let's grow in JESUS everyday till we attain His perfection so that we be found worthy to stand before Him when He comes - Luke 21:36; Colossians 1:28</em></strong></p>
 
@@ -155,7 +175,7 @@
 
   <div class="content-with-sides">
     <div class="side-image">
-      <img src="Psalms23-3.png" alt="Psalm 23:3">
+      <video src="media\video1_2025-08-07.mp4" autoplay muted loop playsinline width="100%" style="border-radius:10px;"></video>
     </div>
 
     <div class="center-content">
@@ -192,7 +212,7 @@
     </div>
 
     <div class="side-image">
-      <img src="Psalms24-1.png" alt="Psalm 24:1">
+      <video src="media\video2_2025-08-07.mp4" autoplay muted loop playsinline width="100%" style="border-radius:10px;"></video>
     </div>
   </div>
 
